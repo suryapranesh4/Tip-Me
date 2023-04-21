@@ -1,4 +1,4 @@
-# TIP ME - Tip Management System using Avalanche!
+# TIP ME - Restaurants Payments System using Avalanche!
 
 A decentralized system for restaurant servers to log their orders and collect their tips in AVAX!
 
@@ -60,6 +60,7 @@ The reason we chose to use Avalanche over other blockchain platforms is quite si
 
 - addWaiter: This function allows the server to add themselves to the system.
 - addOrder: This function allows the server to add the order they completed along with the tip amount.
+- updateName: This function allows the server to sync thier name with the wallet address for better reference in the application.
 - getWaiters: This function is used to display the servers in the Waiters Leaderboard.
 - getOrders: This function is used to display the orders completed in the system.
 - waiterToTip: This mapping is used to co-relate a particular server with their corresponding tips.
@@ -85,17 +86,17 @@ The reason we chose to use Avalanche over other blockchain platforms is quite si
 
 # SMART CONTRACT
 
-#### TipMe.SOL (0xA175c9012bf61D9E32216559B2962a0AA4Dd8315 - Fuji C-Chain Testnet)
+#### TipMe.Sol (0xf473300D63f3788CCcD8814DE875C60CA1248841 - Fuji C-Chain Testnet)
 
 - Default contract for executing the functions of the program.
-- https://testnet.snowtrace.io/address/0xA175c9012bf61D9E32216559B2962a0AA4Dd8315
+- https://testnet.snowtrace.io/address/0xf473300D63f3788CCcD8814DE875C60CA1248841
 
 # HOW TO RUN PROJECT
 
 #### Clone repository
 
-git clone https://github.com/suryapranesh4/Tip-Management-System-Avalanche <br/>
-cd Tip-Management-System-Avalanche
+git clone https://github.com/suryapranesh4/Tip-Me <br/>
+cd Tip-Me
 
 #### Install dependencies for smart contract
 
@@ -119,28 +120,40 @@ npm run dev (Fires the local vite frontend server on port 5173)
 
 ![TipMe Application](connect.png "TipMe Application") <br/>
 
-#### Snowflake deployed contract with AVAX loaded: <br/>
+#### Snowflake blockchain explorer - Deployed contract : <br/>
 
-![TipMe Application](contract.png "TipMe Application") <br/>
+![TipMe Application](snowflake.png "TipMe Application") <br/>
 
-#### Initial UI of the app : <br/>
+#### Server Dashboard : <br/>
 
-![TipMe Application](initialApp.png "TipMe Application") <br/>
+![TipMe Application](dashboard.png "TipMe Application") <br/>
 
 #### Loading screen : <br/>
 
-![TipMe Application](connect.png "TipMe Application") <br/>
+![TipMe Application](loading.png "TipMe Application") <br/>
 
-#### Tip Management application : <br/>
+#### Module for the server to log orders in their name : <br/>
 
-![TipMe Application](mainscreen.png "TipMe Application") <br/>
+![TipMe Application](addOrder.png "TipMe Application") <br/>
 
-#### After 'Add Order', order details with link to snowflake transaction : <br/>
+#### QR Code linked to smart contract (Restaurant wallet) to facilitate customer to make payments : <br/>
 
-![TipMe Application](snowflakeLink.png "TipMe Application") <br/>
+![TipMe Application](qrcode.png "TipMe Application") <br/>
 
-#### Snowflake contract transactions after 'Withdraw Tips' by Server : <br/>
+#### List of Orders added : <br/>
 
-![TipMe Application](snowflake.png "TipMe Application") <br/>
-# Tip-Me
-# Tip-Me
+![TipMe Application](orders.png "TipMe Application") <br/>
+
+#### Tips received by each server : <br/>
+
+![TipMe Application](tips.png "TipMe Application") <br/>
+
+#### Server Leaderboard : <br/>
+
+![TipMe Application](server.png "TipMe Application") <br/>
+
+#### Module to facilitate server to withdraw tips to their crypto wallet in Avalanche(AVAX) : <br/>
+
+![TipMe Application](withdraw.png "TipMe Application") <br/>
+
+
