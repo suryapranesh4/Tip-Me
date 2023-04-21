@@ -74,7 +74,7 @@ export default function SearchBar({
       <img src={Search} alt="Search" className="searchIcon" />
       <div className="notification">
         <img src={Bell} alt="Bell" className="searchIcon" />
-        <div className="notificationNumber">4</div>
+        {currentAccount && <div className="notificationNumber">4</div>}
       </div>
       <img
         src={Profile}

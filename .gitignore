@@ -1,4 +1,5 @@
 client/node_modules
+client/dist
 client/package-lock.json
 smart_contract/cache
 smart_contract/node_modules
