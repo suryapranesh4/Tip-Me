@@ -1,14 +1,18 @@
-# TIP ME - Restaurants Payments System using Avalanche!
+# TIP ME - Restaurant Payment Solution based on Avalanche!
 
-A decentralized system for restaurant servers to log their orders and collect their tips in AVAX!
+A decentralized system for restaurants to collect payments from customers and payout tips to the servers in AVAX!
 
 ## PROBLEM STATEMENT
 
-In the current scenario, we have seen that the tipping system is flawed. When we say flawed, it means that the server works the whole day, serve the customers, get tipped and at the end of the day when it's time to collect their wages, it gets split amongst all the servers. We think this is unfair. When a certain server who is excellent at their work and manages to get more tips as compared to others who may not be so good with their customers ends up having to split their share with the rest seems wrong. The server has earned the tip because of their exceptional service. We are here to change how this works.
+Restaurants and the servers that work there currently face two main challenges in the business.
+
+1. The system that is currently used by restaurants is heavily dependant on payment mediums such as VISA, MasterCard, Interac and such. These intermediaries levy a hefty charge for using their system to process payments on each transaction. For every transaction that these intermediaries process, the restaurant ends up giving a percent of the transaction value to them. This dependancy on such systems tends to take away a considerable chunk of profits that these restaurants make.
+
+2. In the current scenario, we have seen that the tipping system is flawed. When we say flawed, it means that the server works the whole day, serve the customers, get tipped and at the end of the day when it's time to collect their wages, it gets split amongst all the servers. We think this is unfair. When a certain server who is excellent at their work and manages to get more tips as compared to others who may not be so good with their customers ends up having to split their share with the rest seems wrong. The server has earned the tip because of their exceptional service. We are here to change how this works.
 
 ## GOALS
 
-Our goal is to create a decentralized web portal wherein the servers are able to login to a system, log their orders along with the tips they received & withdraw the total tip they have accumulated in AVAX.
+Our goal is to create a decentralized web portal which facilitates order management for the restaurant and tip management for the servers as they are able to login to the system, log their orders along with the tips they received & withdraw the total tip they have accumulated in AVAX.
 
 ## WHY AVALANCHE?
 
@@ -21,8 +25,8 @@ The reason we chose to use Avalanche over other blockchain platforms is quite si
 
 ## STAKEHOLDERS
 
-- Customers: These include the people who are here at the restaurant to have their meal. They act as the soruce of tips for the servers.
-- Servers: They are the entities who will be using the platform to log the orders they served and withdraw the tip amount as and when required.
+- Customers: These include the people who are here at the restaurant to have their meal. They act as the soruce of revenue for the restaurant and tips for the servers.
+- Servers: They are the entities who will be using the platform to log the orders and process the payments as well as withdraw the tip amount as and when required.
 - Management: This includes the manager & the owner of the restaurant i.e. the client for whom the system is made.
 - Developers: These are the individuals or teams responsible for building and maintaining the application.
 
@@ -36,6 +40,7 @@ The reason we chose to use Avalanche over other blockchain platforms is quite si
 ## DATA
 
 - There is no need to store any Personally Identifiable Information of the servers.
+- All the orders fulfilled by the restaurant is stored on the blockchain once the customer is done with the payment.
 - Server's Wallet Address data is stored on blockchain along with the tips they have so far accumulated.
 - We are also storing the individual order data in order to back trace and have a history of orders served in a period.
 - Other than that, we are not storing any data off-chain as the data size is well within the on-chain limit.
@@ -43,8 +48,8 @@ The reason we chose to use Avalanche over other blockchain platforms is quite si
 ## USER STORY
 
 1. A server takes the orders from the customers and serves them the food.
-2. Impressed by the quality of service provided by the server, the customers give a generous tip to the server.
-3. Delighted with the tip, the server goes to the Tip Me system and logs the order for the previous customers.
+2. The server goes to the Tip Me system and logs the order for the customers.
+3. Impressed by the quality of service provided by the server, the customers pays for the meal and provides a generous tip to the server.
 4. Upon submitting the order, the server sees that they are on the top of the Waiters Leaderboard.
 5. She serves many other customers and the tips keep on adding to her balance.
 6. At the end of the shift, she sees that she has managed to accumulate a substantial amount of tip in the system.
@@ -60,11 +65,14 @@ The reason we chose to use Avalanche over other blockchain platforms is quite si
 
 - addWaiter: This function allows the server to add themselves to the system.
 - addOrder: This function allows the server to add the order they completed along with the tip amount.
-- updateName: This function allows the server to sync thier name with the wallet address for better reference in the application.
+- updateWaiterName: This function allows the server to add thier name in the system to correspond with the wallet address for better reference in the application.
 - getWaiters: This function is used to display the servers in the Waiters Leaderboard.
 - getOrders: This function is used to display the orders completed in the system.
-- waiterToTip: This mapping is used to co-relate a particular server with their corresponding tips.
 - withdrawTips: This function is used by the server to withdraw the tips earned by them.
+- waiterToTip: This mapping is used to co-relate a particular server with their corresponding tips.
+- addressToWaiterName: This mapping is used to co-relate a particular wallet address to the wallet owner (server's) name.
+- orderToWaiterName: This mapping is used to link the orders in the system with the name of the server that completed the particular order.
+- orderToWaiterAddress: This mapping allows the system to map the orders with the wallet address of the sever that fulfilled the order.
 
 ## DIAGRAM (FLOW, SYSTEM)
 
