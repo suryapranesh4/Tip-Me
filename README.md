@@ -1,4 +1,4 @@
-# TIP ME - Restaurant Payment Solution based on Avalanche!
+# TIP ME v2.0 - Restaurant Payment Solution based on Avalanche!
 
 A decentralized system for restaurants to collect payments from customers and payout tips to the servers in AVAX!
 
